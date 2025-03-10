@@ -12,7 +12,7 @@
 
 2. 프로젝트를 실행합니다(가상환경 자동 세팅):
     ```bash
-    sh run-project.sh
+    sh script/run-project.sh
     ```
 
 ## 프로젝트 구조
