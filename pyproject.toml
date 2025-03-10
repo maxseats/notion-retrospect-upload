@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "notion-retrospect-upload"
+version = "0.1.0"
+description = ""
+authors = ["maxseats <oooooo123456@naver.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4"
+requests = ">=2.32.3,<3.0.0"
+pytz = ">=2025.1,<2026.0"
+openai = ">=1.65.5,<2.0.0"
+notion-client = ">=2.3.0,<3.0.0"
+python-dotenv = ">=1.0.1,<2.0.0"
+md2notionpage = ">=0.1.5,<0.2.0"
+
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+
