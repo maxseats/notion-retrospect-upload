@@ -6,7 +6,7 @@
 
 1. 저장소를 클론합니다:
     ```bash
-    git clone https://github.com/your-repo/notion-retrospect-upload.git
+    git clone https://github.com/maxseats/notion-retrospect-upload.git
     cd notion-retrospect-upload
     ```
 
