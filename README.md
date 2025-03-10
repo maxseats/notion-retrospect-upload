@@ -4,13 +4,19 @@
 
 ## 실행 방법
 
-1. 저장소를 클론합니다:
+1. 저장소 클론:
     ```bash
     git clone https://github.com/maxseats/notion-retrospect-upload.git
     cd notion-retrospect-upload
     ```
+2. `.env` 파일 작성:
 
-2. 프로젝트를 실행합니다(가상환경 자동 세팅):
+    - 다음 링크에서 다운로드할 수 있습니다. ([`.env 파일`](https://www.notion.so/1b20c76f6ccb8058bf97f75cbde32610?pvs=4) / 문의: maxseats)
+    
+    <br>
+     
+    
+3. 프로젝트를 실행합니다(가상환경 자동 세팅):
     ```bash
     sh script/run-project.sh
     ```
@@ -31,6 +37,4 @@ notion-retrospect-upload/
 └── README.md             # 프로젝트 설명
 ```
 
-## 환경 변수 파일
-환경 변수 파일(.env)은 다음 링크에서 다운로드할 수 있습니다(문의 : maxseats):
-[.env 파일 다운로드](https://www.notion.so/1b20c76f6ccb8058bf97f75cbde32610?pvs=4)
+
