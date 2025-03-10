@@ -5,6 +5,7 @@ from openai import OpenAI
 from notion_client import Client
 import os
 from dotenv import load_dotenv
+import logging
 
 from md2notionpage.core import parse_md
 from gpt_prompt import *
@@ -24,6 +25,23 @@ headers = {
     "Content-Type": "application/json",
     "Notion-Version": "2022-06-28",
 }
+
+# 로거 설정
+log_directory = "log"
+os.makedirs(log_directory, exist_ok=True)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler(os.path.join(log_directory, "main.log")),
+        logging.StreamHandler(),
+    ],
+)
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger(__name__)
 
 
 def get_current_time() -> datetime:
@@ -216,5 +234,11 @@ def upload_notion_weekly_retrospect():
     create_daily_page(retrospect_title, gpt_retrospect)
 
 
-# 최근 6일 간의 개발 일지를 참고하여 주간회고를 작성한 후, 노션에 업로드합니다.
-upload_notion_weekly_retrospect()
+if __name__ == "__main__":
+
+    logger.info(f"{get_current_time()} - upload_notion_weekly_retrospect 시작")
+
+    # 최근 6일 간의 개발 일지를 참고하여 주간회고를 작성한 후, 노션에 업로드합니다.
+    upload_notion_weekly_retrospect()
+
+    logger.info(f"{get_current_time()} - upload_notion_weekly_retrospect 끝")
