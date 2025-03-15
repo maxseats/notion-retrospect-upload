@@ -3,5 +3,6 @@ __pycache__
 .env
 intermediate_output
 log
+*.log
 crontab-register.sh
 run-project.sh
